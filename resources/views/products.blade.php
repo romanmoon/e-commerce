@@ -41,7 +41,7 @@
 
                     <div class="single-product">
                         <div class="product-img">
-                            <a href="product-details.html">
+                            <a href="">
                                 <img class="default-img" src="{{url('/uploads/product/'.$mproduct->product_image)}}" alt="#">
                                 <img class="hover-img" src="{{url('/uploads/product/'.$mproduct->product_image)}}" alt="#">
                             </a>

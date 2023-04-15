@@ -21,4 +21,8 @@ class Order extends Model
         return User::where('id',$this->user_id)->first();
        
     }
+    // public function products()
+    // {
+    // 	return $this->belongsToMany(Product::class, 'order_items','order_id','product_id');
+    // }
 }

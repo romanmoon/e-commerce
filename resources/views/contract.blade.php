@@ -21,8 +21,9 @@
 			
 		<!-- Start Blog Single -->
         <div >
-        <h2>RedStrore</h2>
-        <p>online shoping platform. <br> happy shopping.</p>
+        <h1>RedStrore</h1>
+		<h2>Feel Free to Call for any Inquiry: 01812459860</h2>
+        <h3>online shoping platform. <br> happy shopping.</p></h3>
 
         </div>
        

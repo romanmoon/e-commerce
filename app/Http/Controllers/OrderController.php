@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -66,11 +67,16 @@ class OrderController extends Controller
         $order->grand_total= \Cart::session(auth()->user()->id)->getTotal();
         $order->item_count= \Cart::session(auth()->user()->id)->getContent()->count();
         $order->user_id = auth()->user()->id;
+        // $order->customer_name = auth()->user()->name;
         $order->save();
 
            $cartItems = \Cart::session(auth()->user()->id)->getContent();
            foreach ($cartItems as $item) {
                $order->items()->attach($item->id,['price'=> $item->price, 'quantity'=>$item->quantity]);
+
+               $product=Product::find($item->id);
+           $product->stock=$product->stock-$item->quantity;
+           $product->save();
            }
            if (request('payment_method')=='paypal') {
                # code...
@@ -123,5 +129,11 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+
+    public function orderView($order)
+    {
+        $order=Order::find($order);
+        return view('myOrderView',compact('order'));
     }
 }

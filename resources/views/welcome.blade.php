@@ -11,14 +11,15 @@
         <!-- Single Slider -->
         <div class="single-slider" >
 
-            <div class="container" style="background-image: url('imgs/menshirt.png');">
+            <div class="container" style="background-image: url('imgs/banner.png');">
+          
                 <div class="row no-gutters">
                     <div class="col-lg-9 offset-lg-3 col-12">
                         <div class="text-inner">
                             <div class="row">
                                 <div class="col-lg-7 col-12">
                                     <div class="hero-text">
-                                        <h1><span>UP TO 50% OFF </span>Shirt For Man</h1>
+                                        <h1>Shirt For Man</h1>
                                         <div class="button">
                                             <a href="{{route('products')}}" class="btn">Shop Now!</a>
                                         </div>
@@ -41,7 +42,7 @@
                 <!-- Single Banner  -->
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="/imgs/mensummer.JPG" alt="#">
+                        <img src="/imgs/mensummer-1.webp" alt="#">
                         <div class="content">
                             <p>Man's Collectons</p>
                             <h3>Summer travel <br> collection</h3>
@@ -54,7 +55,7 @@
                  <!-- Single Banner  -->
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="/imgs/bagcollection.JPG" alt="#">
+                        <img src="/imgs/bagcollection-1.WEBP" alt="#">
                         <div class="content">
                             <p>Bag Collectons</p>
                             <h3>Awesome Bag <br> 2021</h3>
@@ -66,7 +67,7 @@
                 <!-- Single Banner  -->
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="single-banner">
-                        <img src="imgs/kidscollection.PNG" alt="#">
+                        <img src="imgs/kidscollection-1.jpg" alt="#">
                         <div class="content">
                             <p>Kid's Collectons</p>
                             <h3>Awesome Toy and Cloths <br> 2021</h3>
@@ -429,43 +430,12 @@
     <section class="shop-home-list section">
         <div class="container">
             <div class="row">
+                
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="row">
                         <div class="col-12">
                             <div class="shop-section-title">
-                                <h1>On sale</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Start Single List  -->
-                    @php
-                 $products=Product::orderBy('id','DESC')->paginate(4);
-                @endphp
-                @foreach($products as $product)
-                    <div class="single-list">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="list-image overlay">
-                                    <img sizes="115*140" src="{{url('/uploads/product/'.$product->product_image)}}" alt="#">
-                                    <a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12 no-padding">
-                                <div class="content">
-                                    <h4 class="title"><a href="{{route('single_product',$product->id)}}">{{$product->name}}</a></h4>
-                                    <p class="price with-discount">{{$product->price}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single List  -->
-                   @endforeach
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="shop-section-title">
-                                <h1>Best Seller</h1>
+                                <h1>Latest Product</h1>
                             </div>
                         </div>
                     </div>
@@ -494,40 +464,7 @@
                     @endforeach
                     <!-- End Single List  -->
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="shop-section-title">
-                                <h1>Top viewed</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Start Single List  -->
-                    @php
                 
-
-                 $products=Product::orderBy('id','DESC')->paginate(4);
-                @endphp
-                @foreach($products as $product)
-                    <div class="single-list">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="list-image overlay">
-                                    <img src="{{url('uploads/product/'.$product->product_image)}}" alt="#">
-                                    <a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12 no-padding">
-                                <div class="content">
-                                    <h5 class="title"><a href="{{route('single_product',$product->id)}}">{{$product->name}}</a></h5>
-                                    <p class="price with-discount">{{$product->price}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single List  -->
-                    @endforeach
-                </div>
             </div>
         </div>
     </section>

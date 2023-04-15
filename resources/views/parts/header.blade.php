@@ -21,8 +21,8 @@
                         <!-- Top Left -->
                         <div class="top-left">
                             <ul class="list-main">
-                            <li><a href="#"><i class="ti-headphone-alt"></i> +8801767474729 </a></li>
-                                <li><a href="#"><i class="ti-email"></i> rubelrana327@gmail.com </a></li>
+                            <li><a href="#"><i class="ti-headphone-alt"></i> +8801812459860 </a></li>
+                                <li><a href="#"><i class="ti-email"></i> zawadhridoy2016@gmail.com </a></li>
                             </ul>
                         </div>
                         <!--/ End Top Left -->
@@ -32,7 +32,7 @@
                         <div class="right-content">
                             <ul class="list-main">
                                 <li>  <a href="https://www.google.com/maps/place/Ashulia+Bazar+Bus+Stop/@23.8976924,90.328817,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c2511186ded3:0xb03e8d9f51ad0e47!8m2!3d23.8976875!4d90.3310057"> <i class="ti-location-pin"></i> Store location</li></a>
-                                <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
+                                <li><i class="ti-alarm-clock"></i> <a href="{{ route('view') }}">Daily deal</a></li>
 
                                 
 
@@ -160,12 +160,12 @@
                        
                         <li><a href="{{route('products')}}">accessories</a></li>
                         <!-- <li><a href="#">top 100 offer</a></li> -->
-                        <li><a href="#">sunglass</a></li>
-                        <li><a href="#">watch</a></li>
+                        <li><a href="{{route('products')}}">sunglass</a></li>
+                        <li><a href="{{route('products')}}">watch</a></li>
                         <li><a href="{{route('products')}}">man’s product</a></li>
                         <li><a href="{{route('products')}}">ladies</a></li>
-                        <li><a href="#">westrn dress</a></li>
-                        <li><a href="#">denim </a></li>
+                        <li><a href="{{route('products')}}">westrn dress</a></li>
+                        <li><a href="{{route('products')}}">denim </a></li>
                         </ul>
                     </div>
                 </div>

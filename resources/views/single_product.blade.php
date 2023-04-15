@@ -24,6 +24,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-12">
+						
+    <center>
+        @if(Session::has('message'))
+        <p class="alert alert-success">{{ Session::get('message') }}</p>
+    @endif
+    </center>
 						<div class="blog-single-main">
 							<div class="row">
 								<div class="col-12">
@@ -60,7 +66,7 @@
 										<form action="{{route('formAddcart')}}" method="POST">
 											@csrf 
 											<input type="hidden" name="product" value="{{$product->id}}">
-											<input type="number" class="form-control" name="quantity" value="1" required onchange="validateAmount(this.value,{{$product->id}} )">
+											<input type="number" min="1" class="form-control" name="quantity" value="1" required onchange="validateAmount(this.value,{{$product->id}} )">
 											<br><br>
 
 											<button type="submit" class="btn btn-primary">Add to cart</button>

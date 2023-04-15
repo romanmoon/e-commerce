@@ -11,7 +11,7 @@
                                 <a href="index.html"><img src="images/Logo.png" alt="#"></a>
                             </div> 
                             <p class="text">Do shopping, make it easy through online and secure more. Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</p>
-                            <p class="call">Got Question? Call me 24/7<span><a href="tel:123456789">+8801767474729</a></span></p>
+                            <p class="call">Got Question? Call me 24/7<span><a href="tel:123456789">01812-459860</a></span></p>
                         </div>
                         <!-- End Single Widget -->
                     </div>
@@ -50,17 +50,17 @@
                             <!-- Single Widget -->
                             <div class="contact">
                                 <ul>
-                                    <li>Bara Ashulia, Dhaka-1230</li>
+                                    <li>Khilgaon Dhaka, Dhaka-1219</li>
                                     <li>Bangladesh</li>
-                                    <li>rubelrana327@gmail.com</li>
-                                    <li>+8801767474729</li>
+                                    <li>zawadhridoy2016@gmail.com</li>
+                                    <li>+8801812459860</li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
                             <ul>
                                 <li><a href="https://www.facebook.com/rubel.rana.94849"><i class="ti-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/rubelrana327"><i class="ti-twitter"></i></a></li>
-                                <li><a href="https://github.com/rubel260"><i class="ti-github"></i></a></li>
+                                <li><a href="https://github.com/zawadl260"><i class="ti-github"></i></a></li>
                                 <!-- <li><a href="https://www.linkedin.com"><i class="ti-linkedin"></i></a></li> -->
                             </ul>
                         </div>
@@ -76,7 +76,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-12">
                             <div class="left">
-                                <p>Copyright © 2022 <a href="http://www.wpthemesgrid.com" target="_blank">Md.Rubel Rana</a>  -  All Rights Reserved.</p>
+                                <p>Copyright © 2022 <a href="http://www.wpthemesgrid.com" target="_blank">Adullah-Al-Zawad</a>  -  All Rights Reserved.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-12">

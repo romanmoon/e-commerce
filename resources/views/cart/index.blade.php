@@ -41,7 +41,7 @@
 						<tbody>
 							@foreach($cartItems as $cartItem)
 							<tr>
-								<td class="image" data-title="No"><img src="{{asset('/uploads/product/'.$cartItem->product_image)}}" alt="#"></td>
+								<td class="image" data-title="No"><img src="{{url('/uploads/product/'.$cartItem->associatedModel->product_image)}}" alt="#"></td>
 								<td class="product-des" data-title="Description">
 									<p class="product-name"><a href="#">{{$cartItem->name}}</a></p>
 									
@@ -97,6 +97,9 @@
 									</ul>
 									<div class="button5">
 										<a href="{{route('checkout')}}" class="btn">Checkout</a>
+										
+										
+										
 										<a href="{{route('home')}}" class="btn">Continue shopping</a>
 									</div>
 								</div>

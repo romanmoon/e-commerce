@@ -42,7 +42,7 @@
                 
             </select>
                         <label for="price">Price</label>
-                        <input type="text" name="price" class="form-control" id="price" required>
+                        <input type="number" min="1" name="price" class="form-control" id="price" required>
 
                         <label for="description"> Description</label>
                         <textarea type="string" name="description" class="form-control" id="description" required></textarea>

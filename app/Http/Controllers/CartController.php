@@ -11,6 +11,10 @@ class CartController extends Controller
 {
     public function addcart(Product $product)
     {
+        if($product->stock<1)
+        {
+            return back()->with('message','Stock Out');
+        }
     \Cart::session(auth()->user()->id)->add(array(
     'id' => $product->id,
     'name' => $product->name,
@@ -27,6 +31,14 @@ class CartController extends Controller
     public function formAddcart(Request $request)
     {
         $product=Product::where('id', $request->product)->first();
+
+      
+
+        if($product->stock<$request->quantity)
+        {
+            return back()->with('message','not available enough quantity!');
+        }
+
     \Cart::session(auth()->user()->id)->add(array(
     'id' => $product->id,
     'name' => $product->name,

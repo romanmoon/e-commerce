@@ -20,6 +20,27 @@ class AdminController extends Controller
     	return view('admin.newcategory');
     }
 
+    public function editcategory(Request $request)
+    {
+        $category = Category::findOrFail($request->id);
+    	return view('admin.editcategory')->with(['category' => $category]);
+    }
+
+    public function updatecategory(Request $request, $id){
+        $category = Category::findOrFail($id);
+        $category->name = $request->name;
+        $category->discount = $request->discount;
+        $category->status = $request->status;
+        $category->save();
+        return redirect('/categorylist');
+    }
+
+    public function deletecategory(Request $request){
+        $category = Category::findOrFail($request->id);
+        $category->delete();
+        return redirect('/categorylist');
+    }
+
 
     public function newcategory2(Request $request)
     {
@@ -46,7 +67,7 @@ class AdminController extends Controller
     public function orderpending()
     {
         $all_categories=Category::get();
-        $pendingOrders=Order::where('status','processing')->get();
+        $pendingOrders=Order::where('status','pending')->get();
         return view('admin.orderpending',compact('pendingOrders'));
     }
 
